@@ -1,0 +1,83 @@
+
+// query {
+//   allAttendances{
+//     id,
+//     classCod,
+//     studentCod
+//     checkDate
+//   }
+// }
+
+// query {
+//     attendancesById(id:6) {
+//       id,
+//       classCod,
+//       studentCod,
+//       checkDate
+//     }
+//   }
+
+
+// query {
+//     attendancesByStudentCod(studentCod: "0003"){
+//      id
+//      classCod
+//      studentCod
+//    }
+//  }
+
+// query {
+//     attendancesByclassCod(classCod: "0004"){
+//      id
+//      classCod
+//      studentCod
+//    }
+//  }
+
+// mutation {
+//     createAttendance(attendance: {
+//       classCod:"0006",
+//       studentCod:"0006"
+//     }) {
+//       id,
+//       classCod,
+//       studentCod,
+//       checkDate
+//     }
+//   }
+
+// query{
+//   allClasses{
+//   	codigoAsignatura,
+//     nombreAsignatura
+//   }
+// }
+
+// query {
+//   classById(id:1){
+//     codigoAsignatura,
+//     nombreAsignatura
+//   }
+// }
+
+
+// query	{
+//   studentByCod(cod:1){
+//     id,
+//     direccion,
+//     tipoId,
+//     nombre1,
+//     apellido1
+//   }
+// }
+
+// mutation {
+//   createAttendance(attendance: {
+//     classCod:"004",
+//     studentCod: "001"
+//   }){
+//     id,
+//     classCod,
+//     checkDate
+//   }
+// }
