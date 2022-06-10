@@ -1,7 +1,5 @@
 
 export const attendanceTypeDef = `
-scalar Date
-
   type Attendance {
       id: Int!
       studentCod: Int!

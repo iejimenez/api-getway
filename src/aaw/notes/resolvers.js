@@ -1,7 +1,27 @@
 import  NoteService  from './service';
 
 const resolvers = {
-	Query: {
+	Query: { 
+		getUsuario: (_, { login, password }) =>{
+			const as = new NoteService();
+			return as.getUsuario(login, password);
+		},
+		getCorte: (_, { codigoCorte }) =>{
+			const as = new NoteService();
+			return as.getCorte(codigoCorte);
+		},
+		getAsignaturasDocente: (_, { codigoDocente }) =>{
+			const as = new NoteService();
+			return as.getAsignaturasDocente(codigoDocente);
+		},
+		getNotasAsignatura: (_, { codigoAsignatura, codigoCorte }) =>{
+			const as = new NoteService();
+			return as.getNotasAsignatura(codigoAsignatura, codigoCorte);
+		},
+		getNombreDocente: (_, { codigoDocente }) =>{
+			const as = new NoteService();
+			return as.getNombreDocente(codigoDocente);
+		},
 		allClasses: (_) => {
 			const ns = new NoteService();
 			return ns.allNotes();
@@ -12,9 +32,9 @@ const resolvers = {
 			const ns = new NoteService();
 			return ns.createNote(note);
 		},	
-		deleteNote: (_, { codEstudianteAsigantrua, codCorte }) => {
+		deleteNote: (_, { codigoEstudianteAsignatura, codigoCorte }) => {
 			const ns = new NoteService();
-			return ns.deleteNote(codEstudianteAsigantrua, codCorte);
+			return ns.deleteNote(codigoEstudianteAsignatura, codigoCorte);
 		}			
 	}
 };
